@@ -223,6 +223,8 @@ public class Educational {
     private Interaction interaction;
     @ElementList(inline = true, required = false)
     private List<DidaticStrategy> didaticStrategy;
+    @ElementList(inline = true, required = false)
+    private List<KnowledgeArea> knowledgeAreas;
 
     public Educational() {
         this.intendedEndUserRoles = new ArrayList<>();
@@ -232,6 +234,7 @@ public class Educational {
         this.languages = new ArrayList<>();
         this.contexts = new ArrayList<>();
         this.didaticStrategy = new ArrayList<>();
+        this.knowledgeAreas = new ArrayList<>();
         //TipicalLearningTime should not be initialized to avoid create a blank element in the XML
     }
 
@@ -472,6 +475,19 @@ public class Educational {
         this.learningResourceTypes = learningResourceType;
     }
 
+    public List<KnowledgeArea> getKnowledgeAreas() {
+        return knowledgeAreas;
+    }
+
+    public void setKnowledgeAreas(List<KnowledgeArea> knowledgeArea) {
+        this.knowledgeAreas = knowledgeArea;
+    }
+
+    public void addKnowledgeArea(String knowledgeArea) {
+        KnowledgeArea ka = new KnowledgeArea(knowledgeArea);
+        this.knowledgeAreas.add(ka);
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -489,6 +505,7 @@ public class Educational {
         hash = 89 * hash + Objects.hashCode(this.learningContentType);
         hash = 89 * hash + Objects.hashCode(this.interaction);
         hash = 89 * hash + Objects.hashCode(this.didaticStrategy);
+        hash = 89 * hash + Objects.hashCode(this.knowledgeAreas);
         return hash;
     }
 
@@ -541,6 +558,9 @@ public class Educational {
             return false;
         }
         if (!Objects.equals(this.interaction, other.interaction)) {
+            return false;
+        }
+        if (!Objects.equals(this.knowledgeAreas, other.knowledgeAreas)) {
             return false;
         }
         return Objects.equals(this.didaticStrategy, other.didaticStrategy);
