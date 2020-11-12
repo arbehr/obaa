@@ -57,10 +57,17 @@ public class Role extends TextElement {
     public static final String SCRIPT_WRITER = "script writer";
     public static final String INSTRUCTIONAL_DESIGNER = "instructional designer";
     public static final String SUBJECT_MATTER_EXPERT = "subject matter expert";
+    public static final String CONTENT_PRODUCTION = "content production";
+    public static final String LESSON_PLAN_PRODUCTION = "lesson plan production";
+    public static final String PEDAGOGICAL_REVIEWER = "pedagogical reviewer";
+    public static final String CONTENT_REVIWER_ABOUT_THE_SEA = "content reviewer about the sea";
+    public static final String PROGRAMMER = "programmer";
+    public static final String OTHER = "other";
 
     public Role() {
         super(new ArrayList<>(Arrays.asList(UNKNOWN, AUTHOR, PUBLISHER, INITIATOR, TERMINATOR, VALIDATOR, EDITOR,
                 GRAPHICAL_DESIGNER, TECHNICAL_IMPLEMENTER, CONTENT_PROVIDER, TECHNICAL_VALIDATOR, EDUCATIONAL_VALIDATOR,
-                SCRIPT_WRITER, INSTRUCTIONAL_DESIGNER, SUBJECT_MATTER_EXPERT)));
+                SCRIPT_WRITER, INSTRUCTIONAL_DESIGNER, SUBJECT_MATTER_EXPERT, CONTENT_PRODUCTION, LESSON_PLAN_PRODUCTION,
+                PEDAGOGICAL_REVIEWER, CONTENT_REVIWER_ABOUT_THE_SEA, PROGRAMMER, OTHER)));
     }
 }

@@ -256,7 +256,7 @@ public class OBAATest {
         assert (!(l.getLifeCycle() == null));
         assert (!(l.getLifeCycle().getContribute() == null));
         try {
-            l.getLifeCycle().getContribute().get(0).setRole("other");
+            l.getLifeCycle().getContribute().get(0).setRole("nonexistent");
             fail("Should have thrown exception");
         } catch (IllegalArgumentException e) {
             // thats what we expected

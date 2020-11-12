@@ -44,7 +44,7 @@ public class EducationalTest {
     @Before
     public void init() {
         json = "{\"interactivityType\":\"expositive\",\"learningResourceTypes\":[\"index\",\"figure\"], "
-                + "\"interactivityLevel\":\"low\", \"contexts\":[\"school\"], "
+                + "\"interactivityLevel\":\"low\", \"contexts\":[\"school\"], \"knowledgeAreas\":[\"Ciências humanas\"], "
                 + "\"difficulty\":\"easy\",\"semanticDensity\":\"medium\", \"typicalLearningTime\":\"PT23H\", "
                 + "\"intendedEndUserRoles\":[\"author\"],\"typicalAgeRanges\":[\"14-17\"],"
                 + "\"didaticStrategy\":[\"challenge\"], \"interaction\": {\"interactionType\":\"object-individual\","
@@ -75,7 +75,7 @@ public class EducationalTest {
         interaction.setSynchronism(false);
         educational.setInteraction(interaction);
         educational.setLearningContentType(LearningContentType.FACTUAL);
-
+        educational.addKnowledgeArea("Ciências humanas");
     }
 
     @Test
@@ -110,5 +110,6 @@ public class EducationalTest {
         assertThat(e.getDescriptions(), equalTo(educational.getDescriptions()));
         assertThat(e.getLanguages(), equalTo(educational.getLanguages()));
         assertThat(e.getLearningContentType(), equalTo(educational.getLearningContentType()));
+        assertThat(e.getKnowledgeAreas(), equalTo(educational.getKnowledgeAreas()));
     }
 }
