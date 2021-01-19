@@ -60,6 +60,7 @@ public class Role extends TextElement {
     public static final String CONTENT_PRODUCTION = "content production";
     public static final String LESSON_PLAN_PRODUCTION = "lesson plan production";
     public static final String PEDAGOGICAL_REVIEWER = "pedagogical reviewer";
+    public static final String TECHNICAL_REVIEWER = "technical reviewer";
     public static final String CONTENT_REVIWER_ABOUT_THE_SEA = "content reviewer about the sea";
     public static final String PROGRAMMER = "programmer";
     public static final String OTHER = "other";
